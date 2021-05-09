@@ -1,12 +1,12 @@
 import React from "react";
+import { initStore } from "../store"
 import styles from "./index.module.css";
 import Card from "./Card";
-import data from "./API/data.json";
 
-export default class Index extends React.Component {
+class Index extends React.Component {
   // getInitialProps - when I need state, lifecycle hooks or initial data population I can export a React.Component (instead of a stateless function)
-  static async getInitialProps() {
-    return { cards: data };
+  static async getInitialProps(store) {
+    return store.dispatch(initialCards());
   }
   render() {
     return (
@@ -25,4 +25,6 @@ export default class Index extends React.Component {
       </div>
     );
   }
-}
+};
+
+export default initStore.withRedux(Index);
