@@ -1,5 +1,5 @@
 import React from "react";
-import { initStore } from "../store"
+import { initStore, initialCards, addItem } from "../store"
 import styles from "./index.module.css";
 import Card from "./Card";
 
