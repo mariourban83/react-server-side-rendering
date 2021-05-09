@@ -5,7 +5,7 @@ import Card from "./Card";
 
 class Index extends React.Component {
   // getInitialProps - when I need state, lifecycle hooks or initial data population I can export a React.Component (instead of a stateless function)
-  static async getInitialProps(store) {
+  static async getInitialProps({store}) {
     return store.dispatch(initialCards());
   }
   render() {

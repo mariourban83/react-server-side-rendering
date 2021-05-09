@@ -24,6 +24,22 @@ export const addItem = (item) => {
     }
 };
 
+// reducers
+export const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'INITIALCARDS':
+            return {
+                cards: action.cards,
+            }
+        case 'ADD':
+            return {
+                ...state,
+                cards: [...state.cards, action.item],
+            }
+        default: return state
+    }
+};
+
 // create store
 const store = ( initialState = startState ) => {
     return createStore(reducer, initialState);
