@@ -13,7 +13,7 @@
 ### Introduction to SSR
 
 Isomorphic, Universal or Server side rendering are the same things. These terms refer to rendering the application on the server side instead of the client side.   
-![ssr](/ssr.png)
+![ssr](https://github.com/mariourban83/react-server-side-rendering/blob/main/public/ssr.png?raw=true)
 
 The application is rendered on the server an the files, sent to the client need only be displayed. On older pcs, or phones that means faster load.
 
